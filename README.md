@@ -8,4 +8,29 @@ Thus, ASICs are better as mass production is possible, the cost per unit is less
 
 ![Fig. Complex ASIC Design](https://github.com/abdelazeem201/ASIC-Physical-Design-Roadmap/blob/main/Figures/Fig.%20Complex%20ASIC%20Design.jpeg)
 
-*##Physical Design flow of Application Specific Integrated Circuits*
+# *Physical Design flow of Application Specific Integrated Circuits:*
+
+*A. Prerequisite for this Roadmap:
+
+1. First of all I would like to tell you to build your basic concepts strong,which includes Digital electronics ,MOSFET,CMOS Design,FF ,Latches.
+"https://www.youtube.com/playlist?list=PLMSBalys69yzp1vrmnYAmpRFiptbuGuaj" 
+ 
+*>>"Note" You don't need to go through the whole coures, you just need the basic concepts of MOSFET * 
+
+2. Digital logic design (ASIC/SOC)/Frontend design: This includes digital design techniques, HDLs like Verilog/SystemVerilog, and several design techniques like timing, synthesis, logic circuits, state machines, pipelining, etc etc
+The best resources in terms of an online course for this is available with cs221 digital design by Dr/Waleed Youssef as Digital System Design - 
+"https://youtube.com/playlist?list=PLoK2Lr1miEm8b6Vv5zAfsbMEPZ1C7fCQw"
+
+and in terms of an Online course for Verilog is available with Hardware modeling using verilog by Dr/Indranil Sen Gupta
+"https://www.youtube.com/playlist?list=PLJ5C_6qdAvBELELTSPgzYkQg3HgclQh-5"
+
+3. 
+
+4. Digital IC Design: A comprehensive Digital IC Design course -by Dr/Hesham Omran- that takes you from basics to ASICs based on the popular textbook "CMOS VLSI Design: A Circuits and Systems Perspective" 4th ed. by Weste and Harris.
+
+part1: https://youtube.com/playlist?list=PLMSBalys69yzvAKErDt7tT7O-iIKPlOCP
+
+part2: https://youtube.com/playlist?list=PLMSBalys69yxoIjeZ2Q3fxs69cGCU14B1
+
+part3: https://youtube.com/playlist?list=PLMSBalys69yw1tSoF42QW9jbbC0-UeCAy
+
