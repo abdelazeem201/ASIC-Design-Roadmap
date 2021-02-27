@@ -24,7 +24,11 @@ The best resources in terms of an online course for this is available with cs221
    and in terms of an Online course for Verilog is available with Hardware modeling using verilog by Dr/Indranil Sen Gupta
    "https://www.youtube.com/playlist?list=PLJ5C_6qdAvBELELTSPgzYkQg3HgclQh-5"
 
-3. 
+3. Digital Design & Computer Architecture
+   
+   DR/Onur Mutlu's lecture videos from the freshman-level Digital Design and Computer Architecture course taught at ETH Zürich in Spring 2020.
+   
+   "https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_FRrloMa2fUYWPGiZUBQo2"
 
 4. Digital IC Design: A comprehensive Digital IC Design course -by Dr/Hesham Omran- that takes you from basics to ASICs based on the popular textbook "CMOS VLSI Design: A Circuits and Systems Perspective" 4th ed. by Weste and Harris.
 
