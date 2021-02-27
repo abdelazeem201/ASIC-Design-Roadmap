@@ -43,8 +43,14 @@ The best resources in terms of an online course for this is available with cs221
 
   *1. Advanced Logic Synthesis by Dhiraj Taneja,Broadcom, Hyderabad.*
    
-    This course aims at imparting practical knowledge in Synthesis and Timing Closure. It also includes Synopsys DC and PT labs. 
+   This course aims at imparting practical knowledge in Synthesis and Timing Closure. It also includes Synopsys DC and PT labs. 
 
-    "https://www.youtube.com/playlist?list=PLbMVogVj5nJQe0_9YJlN9S7ktkA8DI-fL"
+   "https://www.youtube.com/playlist?list=PLbMVogVj5nJQe0_9YJlN9S7ktkA8DI-fL"
   
-    "You can skip the first 12 videos if you want" 
+   "You can skip the first 12 videos if you want" 
+
+  *2. VLSI Physical Design By Prof. Indranil Sengupta*
+   
+   The course will introduce the participants to the basic design flow in VLSI physical design automation, the basic data structures and algorithms used for implementing the        same. The course will also provide examples and assignments to help the participants to understand the concepts involved, and appreciate the main challenges therein. 
+
+   "https://www.youtube.com/playlist?list=PLU8VFS-HdvKtKswbcvvA8yVhzleTV7OE8"
