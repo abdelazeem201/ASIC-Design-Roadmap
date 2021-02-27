@@ -10,12 +10,12 @@ Thus, ASICs are better as mass production is possible, the cost per unit is less
 
 # *Physical Design flow of Application Specific Integrated Circuits:*
 
-*A. Prerequisite for this Roadmap:
+*A. Prerequisite for this Roadmap:*
 
 1. First of all I would like to tell you to build your basic concepts strong,which includes Digital electronics ,MOSFET,CMOS Design,FF ,Latches.
 "https://www.youtube.com/playlist?list=PLMSBalys69yzp1vrmnYAmpRFiptbuGuaj" 
  
-*>>"Note" You don't need to go through the whole coures, you just need the basic concepts of MOSFET * 
+*>>"Note" You don't need to go through the whole coures, you just need the basic concepts of MOSFET* 
 
 2. Digital logic design (ASIC/SOC)/Frontend design: This includes digital design techniques, HDLs like Verilog/SystemVerilog, and several design techniques like timing, synthesis, logic circuits, state machines, pipelining, etc etc
 The best resources in terms of an online course for this is available with cs221 digital design by Dr/Waleed Youssef as Digital System Design - 
