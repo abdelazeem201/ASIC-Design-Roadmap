@@ -39,3 +39,12 @@ The best resources in terms of an online course for this is available with cs221
 
    part3: https://youtube.com/playlist?list=PLMSBalys69yw1tSoF42QW9jbbC0-UeCAy
 
+# *ASIC Design Cycle Work "PnR":*
+
+*1. Advanced Logic Synthesis by Dhiraj Taneja,Broadcom, Hyderabad.
+   
+  This course aims at imparting practical knowledge in Synthesis and Timing Closure. It also includes Synopsys DC and PT labs. 
+
+  "https://www.youtube.com/playlist?list=PLbMVogVj5nJQe0_9YJlN9S7ktkA8DI-fL"
+  
+  "You can skip the first 12 videos if you want" 
