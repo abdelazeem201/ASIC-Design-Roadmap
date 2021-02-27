@@ -51,6 +51,8 @@ The best resources in terms of an online course for this is available with cs221
 
   *2. VLSI Physical Design By Prof. Indranil Sengupta*
    
-   The course will introduce the participants to the basic design flow in VLSI physical design automation, the basic data structures and algorithms used for implementing the        same. The course will also provide examples and assignments to help the participants to understand the concepts involved, and appreciate the main challenges therein. 
+   Physical design and implementation: In VLSI design flow after the front end logic design and verification is done, the backend or physical design flow is the next step in terms of mapping the design to technology. This involves the following steps majorly - Design Netlist (synthesis), Floorplanning, Partitioning, Placement, Clock tree synthesis, Routing, Physical Verification, and GDS Generation for tape out.
+   
+   There are some good online courses available for these on youtube at the following link
 
    "https://www.youtube.com/playlist?list=PLU8VFS-HdvKtKswbcvvA8yVhzleTV7OE8"
