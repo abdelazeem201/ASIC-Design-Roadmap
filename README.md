@@ -57,6 +57,6 @@ The best resources in terms of an online course for this is available with cs221
 
    "https://www.youtube.com/playlist?list=PLU8VFS-HdvKtKswbcvvA8yVhzleTV7OE8"
   
-    *6. Digital VLSI Design (RTL to GDS)*
+   *3. Digital VLSI Design (RTL to GDS)* "Very recommended" 
      "cover the basics of Chip Implementation, from designing the logic (RTL) to providing a layout ready for fabrication (GDS)."
      "https://www.youtube.com/playlist?list=PLZU5hLL_713x0_AV_rVbay0pWmED7992G"
