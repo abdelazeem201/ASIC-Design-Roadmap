@@ -1,0 +1,68 @@
+#Scope: RISC_CORE_1
+
+#Domain: TOP
+create_power_domain TOP
+
+create_supply_net VDDH -domain TOP
+create_supply_port VDDH -domain TOP -direction in
+
+create_supply_net VDDL -domain TOP
+create_supply_port VDDL -domain TOP -direction in
+connect_supply_net VDDL -ports {VDDL}
+
+create_supply_net VSS -domain TOP
+create_supply_port VSS -domain TOP -direction in
+connect_supply_net VSS -ports {VSS}
+
+set_domain_supply_net TOP -primary_power_net VDDH -primary_ground_net VSS
+
+
+add_port_state VSS -state {state1 0.000000}
+add_port_state VDDL -state {state1 0.800000}
+add_port_state VDDH -state {state1 1.200000}
+
+
+#Domain: PD2
+create_power_domain PD2 \
+         -elements {I_DATA_PATH I_CONTROL I_STACK_TOP I_REG_FILE I_PRGRM_CNT_TOP I_INSTRN_LAT}
+create_supply_net VDDL -domain PD2 -reuse
+create_supply_net VSS -domain PD2 -reuse
+set_domain_supply_net PD2 -primary_power_net VDDL -primary_ground_net VSS
+
+add_port_state VSS \
+         -state {state1 0.000000}
+
+#Scope: I_ALU
+
+#Domain: PD1
+create_power_domain PD1 -scope I_ALU \
+         -elements {I_ALU}
+
+
+create_supply_port VSS -domain I_ALU/PD1 -direction in
+create_supply_net VSS -domain I_ALU/PD1
+connect_supply_net I_ALU/VSS -ports {I_ALU/VSS}
+
+create_supply_port PD1_VDD -domain I_ALU/PD1 -direction in
+create_supply_net PD1_VDD -domain I_ALU/PD1
+connect_supply_net I_ALU/PD1_VDD -ports {I_ALU/PD1_VDD}
+
+set_domain_supply_net I_ALU/PD1 -primary_power_net I_ALU/PD1_VDD -primary_ground_net I_ALU/VSS
+
+
+
+add_port_state I_ALU/VSS -state {state1 0.000000}
+add_port_state I_ALU/PD1_VDD -state {state1 1.200000}
+
+
+
+
+connect_supply_net VDDH -ports {VDDH I_ALU/PD1_VDD}
+connect_supply_net VSS -ports {I_ALU/VSS}
+
+
+set_level_shifter shift_up -domain {PD2} -applies_to both -location automatic -rule both
+set_level_shifter shift_up -domain {I_ALU/PD1} -applies_to both -location automatic -rule both
+
+
+
