@@ -12,24 +12,20 @@ Thus, ASICs are better as mass production is possible, the cost per unit is less
 
 *A. Prerequisite for this Roadmap:*
 
-1. First of all I would like to tell you to build your basic concepts strong,which includes Digital electronics ,MOSFET,CMOS Design,FF ,Latches.
-"https://www.youtube.com/playlist?list=PLMSBalys69yzp1vrmnYAmpRFiptbuGuaj" 
+## Tutorials and Courses
+1. [Digital electronics](https://www.youtube.com/playlist?list=PLMSBalys69yzp1vrmnYAmpRFiptbuGuaj) 📽 - First of all I would like to tell you to build your basic concepts strong,which includes Digital electronics ,MOSFET,CMOS Design,FF ,Latches.
  
-   *>>"Note" You don't need to go through the whole coures, you just need the basic concepts of MOSFET* 
+ `"Note" You don't need to go through the whole coures, you just need the basic concepts of MOSFET` 
 
-2. Digital logic design (ASIC/SOC)/Frontend design: This includes digital design techniques, HDLs like Verilog/SystemVerilog, and several design techniques like timing, synthesis, logic circuits, state machines, pipelining, etc etc
-The best resources in terms of an online course for this is available with cs221 digital design by Dr/Waleed Youssef as Digital System Design - 
-   
-   "https://youtube.com/playlist?list=PLoK2Lr1miEm8b6Vv5zAfsbMEPZ1C7fCQw"
+2. Digital logic design (ASIC/SOC)/Frontend design: This includes digital design techniques
 
-   and in terms of an Online course for Verilog is available with Hardware modeling using verilog by Dr/Indranil Sen Gupta
-   "https://www.youtube.com/playlist?list=PLJ5C_6qdAvBELELTSPgzYkQg3HgclQh-5"
+[CS221 digital design by Dr/Waleed Youssef](https://youtube.com/playlist?list=PLoK2Lr1miEm8b6Vv5zAfsbMEPZ1C7fCQw) 📽 - Digital System Design
+
+[Hardware modeling using verilog by Dr/Indranil Sen Gupta](https://www.youtube.com/playlist?list=PLJ5C_6qdAvBELELTSPgzYkQg3HgclQh-5) 📽 -HDLs like Verilog, and several design techniques like timing, synthesis, logic circuits, state machines, pipelining, etc etc
 
 3. Digital Design & Computer Architecture
    
-   DR/Onur Mutlu's lecture videos from the freshman-level Digital Design and Computer Architecture course taught at ETH Zürich in Spring 2020.
-   
-   "https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_FRrloMa2fUYWPGiZUBQo2"
+   [Digital Design and Computer Architecture](https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_FRrloMa2fUYWPGiZUBQo2) 📽- Digital Design and Computer Architecture
 
 4. Digital IC Design: A comprehensive Digital IC Design course -by Dr/Hesham Omran- that takes you from basics to ASICs based on the popular textbook "CMOS VLSI Design: A Circuits and Systems Perspective" 4th ed. by Weste and Harris.
 
@@ -39,29 +35,22 @@ The best resources in terms of an online course for this is available with cs221
 
    part3: https://youtube.com/playlist?list=PLMSBalys69yw1tSoF42QW9jbbC0-UeCAy
 
-# *ASIC Design Cycle Work "PnR":*
+### *ASIC Design Cycle Work "PnR":*
 
   *1. Advanced Logic Synthesis by Dhiraj Taneja,Broadcom, Hyderabad.*
    
-   This course aims at imparting practical knowledge in Synthesis and Timing Closure. It also includes Synopsys DC and PT labs. 
-
-   "https://www.youtube.com/playlist?list=PLbMVogVj5nJQe0_9YJlN9S7ktkA8DI-fL"
+[Logic Synthesis](https://www.youtube.com/playlist?list=PLbMVogVj5nJQe0_9YJlN9S7ktkA8DI-fL) 📽 - This course aims at imparting practical knowledge in Synthesis and Timing Closure. It also includes Synopsys DC and PT labs. 
   
    "You can skip the first 12 videos if you want" 
 
   *2. VLSI Physical Design By Prof. Indranil Sengupta*
    
-   Physical design and implementation: In VLSI design flow after the front end logic design and verification is done, the backend or physical design flow is the next step in terms of mapping the design to technology. This involves the following steps majorly - Design Netlist (synthesis), Floorplanning, Partitioning, Placement, Clock tree synthesis, Routing, Physical Verification, and GDS Generation for tape out.
-   
-   There are some good online courses available for these on youtube at the following link
-
-   "https://www.youtube.com/playlist?list=PLU8VFS-HdvKtKswbcvvA8yVhzleTV7OE8"
+[Physical design and implementation](https://www.youtube.com/playlist?list=PLU8VFS-HdvKtKswbcvvA8yVhzleTV7OE8) 📽 - Physical design and implementation: In VLSI design flow after the front end logic design and verification is done, the backend or physical design flow is the next step in terms of mapping the design to technology. This involves the following steps majorly - Design Netlist (synthesis), Floorplanning, Partitioning, Placement, Clock tree synthesis, Routing, Physical Verification, and GDS Generation for tape out.).
   
    *3. Digital VLSI Design (RTL to GDS)* "Very recommended" 
      
-   "cover the basics of Chip Implementation, from designing the logic (RTL) to providing a layout ready for fabrication (GDS)."
-   
-   "https://www.youtube.com/playlist?list=PLZU5hLL_713x0_AV_rVbay0pWmED7992G"
+[RTL2GDSII](https://www.youtube.com/playlist?list=PLZU5hLL_713x0_AV_rVbay0pWmED7992G) 📽 - cover the basics of Chip Implementation, from designing the logic (RTL) to providing a layout ready for fabrication (GDS).
+  
    
    
    
