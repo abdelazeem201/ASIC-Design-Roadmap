@@ -8,8 +8,11 @@ Thus, ASICs are better as mass production is possible, the cost per unit is less
 
 ![Fig. Complex ASIC Design](https://github.com/abdelazeem201/ASIC-Physical-Design-Roadmap/blob/main/Figures/Fig.%20Complex%20ASIC%20Design.jpeg)
 
-# *Physical Design flow of Application Specific Integrated Circuits:*
 
+# *Physical Design flow of Application Specific Integrated Circuits:*
+<div align="center"> بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم</div>
+
+<div align="center"> “وَمَا أُوتِيتُمْ مِنَ الْعِلْمِ إِلَّا قَلِيلًا”</div>
 *A. Prerequisite for this Roadmap:*
 
 ## Tutorials and Courses
