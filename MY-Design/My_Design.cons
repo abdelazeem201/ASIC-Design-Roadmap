@@ -1,0 +1,141 @@
+###################################
+#                                 #
+#   UNITS                         #
+#                                 #
+###################################
+
+# The unit of time in this library is 1ns 
+# The unit of capacitance in this library is 1pF 
+#
+
+
+###################################
+#                                 #
+#   CLEAN-UP                      #
+#                                 #
+###################################
+
+# Remove any existing constraints and attributes
+#
+reset_design
+
+
+###################################
+#                                 #
+#   CLOCK DEFINITION              #
+#                                 #
+###################################
+
+# A 333Mhz clock is a 3.0ns period:
+#
+create_clock -period 3.0 [get_ports clk]
+
+
+# The maximum clock source latency is 700ps or 0.7ns
+#
+set_clock_latency -source  -max 0.7 [get_clocks clk] 
+
+
+# The maximum clock network latency is 300ps or 0.3 ns:
+#
+set_clock_latency -max 0.3 [get_clocks clk]
+
+
+# The +/-30ps clock insertion delay variation to register clock pins results in 
+# a 60ps worst case skew or uncertainty, if you launch late (+30ps) and 
+# capture early (-30ps)r; Add 40ps due to jitter and 50ps for setup margin;
+# This equals 150ps or 0.15 ns of total uncertainty.
+#
+set_clock_uncertainty -setup 0.15 [get_clocks clk]
+
+
+# The maximum clock transition is 120ps or 0.12ns
+#
+set_clock_transition -max 0.12 [get_clocks clk]
+
+
+###################################
+#                                 #
+#   INPUT TIMING                  #
+#                                 #
+###################################
+
+# The maximum "input delay" (external) on ports data1 and data2 is: 
+# clock period - clock uncertainty - delay of S - register setup time = 
+#     3.0      -      0.15         -     2.2   -      0.2            = 0.45ns
+# 
+set_input_delay -max  0.45 -clock clk [get_ports data*]  
+
+
+# The latest arrival time at port sel is 1.4ns (absolute time). The total clock insertion delay or latency to the external 
+# registers is 700ps + 300ps or 1.0ns. Therefore, the relative input delay on the port is 1.4 -1.0 = 0.4ns
+#
+set_input_delay -max  0.4 -clock clk [get_ports sel]
+
+
+###################################
+#                                 #
+#   OUTPUT TIMING                 #
+#                                 #
+###################################
+
+# The output delay at port out1 is 420ps + 80ps = 500ps or 0.5ns
+#
+set_output_delay -max  0.5 -clock clk [get_ports out1]
+
+
+# The internal delay to out2 is 810ps. The external capturing clock edge happens 3ns after the launch edge, 
+# minus the uncertainty of 0.15ns, or 2.85ns after launch. To constrain the internal delay to 0.81ns the 
+# output delay must therefore be constrained to 2.85ns - 0.81ns = 2.04ns.
+#
+set_output_delay -max 2.04  -clock clk [get_ports out2]
+
+
+# The setup time requirement on port out3 is 400ps or 0.4ns with respect to the capturing register's clock. 
+# This is, by definition, the "set_output_delay" value
+#
+set_output_delay -max  0.4 -clock clk [get_ports out3] 
+
+
+###################################
+#                                 #
+#   COMBINATIONAL LOGIC TIMING    #
+#                                 #
+###################################
+
+# The maximum delay through the combinational logic is 2.45ns. This can be constrained by pretending that there are 
+# launching registers on the input ports Cin1 and Cin2 and capturing registers on the output port Cout, and applying 
+# corresponding input and output delays. The sum of the external input and output delay values must be equal to the 
+# clock period minus the clock uncertainty minus the maximum combo delay = 3ns - 0.15ns - 2.45ns = 0.4ns. 
+# This means that the input and output delay values can be 0.4 and 0.0, or 0.2 and 0.2, or 0.1 and 0.3, etc., respectively.
+#
+set_input_delay -max 0.3 -clock clk [get_ports Cin*]
+set_output_delay -max 0.1 -clock clk [get_ports Cout]
+
+ 
+###################################
+#                                 #
+#   ENVIRONMENTAL ATTRIBUTES      #
+#                                 #
+###################################
+
+
+# All input ports, except clk and Cin, are driven by bufbd1 buffers
+#
+set_driving_cell -max -lib_cell bufbd1 \
+ [remove_from_collection [all_inputs] [get_ports "clk Cin*"]]
+
+
+# Port Cin is a chip level input and has an input transition of 120ps or 0.12 ns
+#
+set_input_transition -max 0.12 [get_ports Cin*]
+
+
+# All outputs, except Cout, drive 2x bufbd7 loads
+#
+set_load -max [expr {2 * [load_of cb13fs120_tsmc_max/bufbd7/I]}] [get_ports out*]
+
+
+# Cout drives 25fF, or .025 pF
+#
+set_load -max 0.025 [get_ports Cout*]
