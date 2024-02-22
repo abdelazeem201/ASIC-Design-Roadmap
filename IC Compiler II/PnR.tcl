@@ -144,3 +144,45 @@ set_clock_tree_options -target_latency 0.000 -target_skew 0.000
 clock_opt 
 ###################################################################################
 #########################
+
+############route_opt#################################
+remove_ignored_layers -all
+set_ignored_layers \
+ -min_routing_layer $MIN_ROUTING_LAYER \
+ -max_routing_layer $MAX_ROUTING_LAYER
+route_opt
+###################################################################################
+#########################
+## std filler
+set pnr_std_fillers "SAEDRVT14_FILL*"
+set std_fillers ""
+foreach filler $pnr_std_fillers { lappend std_fillers "*/${filler}" }
+create_stdcell_filler -lib_cell $std_fillers
+connect_pg_net -net $NDM_POWER_NET [get_pins -hierarchical "*/VDD"]
+connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
+###########reports##########################
+#report_area
+report_design -all
+report_timing
+report_power 
+save_block -as "${TOP_DESIGN}_Final"
+save_lib
+change_names -rules verilog -verbose
+write_parasitics -output {../output/${TOP_DESIGN}.spef}
+write_verilog \
+-include {pg_netlist unconnected_ports} \
+../output/${TOP_DESIGN}_pg.v
+write_verilog \
+-exclude {pg_netlist} \
+../output/${TOP_DESIGN}.v
+write_gds -design ${TOP_DESIGN}_Final \
+ -layer_map $GDS_MAP_FILE \
+ -keep_data_type \
+ -fill include \
+ -output_pin all \
+ -merge_files [list $STD_CELL_GDS $SRAM_SINGLE_GDS] \
+ -long_names \
+ ../output/${TOP_DESIGN}.gds
+#close_block
+#close_lib
+#exit
