@@ -67,3 +67,34 @@ set_fixed_objects [get_cell MemXHier_MemXb]
 set_fixed_objects [get_cell MemYHier_MemXa]
 set_fixed_objects [get_cell MemYHier_MemXb]
 create_keepout_margin -type hard -outer {20 20 20 20} [get_cells Mem?Hier_MemX?]
+
+###################################################################################
+#########################################
+create_placement -floorplan -timing_driven
+legalize_placement
+#########################################Routing Blockages On Macro 
+Cells################################################################
+create_routing_blockage -layers {M1 M2 M3 M4 M5} -boundary [get_attribute 
+[get_cells MemXHier_MemXa] boundary]
+create_routing_blockage -layers {M1 M2 M3 M4 M5} -boundary [get_attribute 
+[get_cells MemYHier_MemXa] boundary]
+create_routing_blockage -layers {M1 M2 M3 M4 M5} -boundary [get_attribute 
+[get_cells MemXHier_MemXb] boundary]
+create_routing_blockage -layers {M1 M2 M3 M4 M5} -boundary [get_attribute 
+[get_cells MemYHier_MemXb] boundary]
+####Connect P/G Pins and Create Power Rails#################
+create_pg_mesh_pattern P_top_two \
+-layers { \
+{ {horizontal_layer: M7} {width: 0.2} {spacing: interleaving} {pitch: 
+30} {offset: 0.856} {trim : true} } \
+{ {vertical_layer: M6} {width: 0.2} {spacing: interleaving} {pitch: 
+30} {offset: 6.08} {trim : true} } \
+} 
+set_pg_strategy S_default_vddvss \
+-core \
+-pattern { {name: P_top_two} {nets:{VSS VDD}} } \
+-extension { {{stop:design_boundary_and_generate_pin}} }
+compile_pg -strategies {S_default_vddvss} 
+remove_routing_blockages *
+####Rings Creation Around Macro Cells#################
+set macro_list {MemXHier_MemXa MemYHier_MemXa MemXHier_MemXb MemYHier_MemXb} 
