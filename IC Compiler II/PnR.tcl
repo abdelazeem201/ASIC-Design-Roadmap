@@ -98,3 +98,15 @@ compile_pg -strategies {S_default_vddvss}
 remove_routing_blockages *
 ####Rings Creation Around Macro Cells#################
 set macro_list {MemXHier_MemXa MemYHier_MemXa MemXHier_MemXb MemYHier_MemXb} 
+
+create_pg_ring_pattern P_HM_ring -horizontal_layer M7 -horizontal_width {1} -vertical_layer M6 -vertical_width {1} -corner_bridge false
+set_pg_strategy S_HM_ring_top -macros $macro_list -pattern { {pattern: 
+P_HM_ring} {nets: {VSS VDD}} {offset: {0.1 0.1}} }
+compile_pg -strategies {S_HM_ring_top } 
+create_routing_blockage -layers * -boundary { {45 425} {305 617} }
+## Create std rail
+#VDD VSS
+create_pg_std_cell_conn_pattern std_rail_conn1 -rail_width 0.094 -layers M1
+set_pg_strategy std_rail_1 -pattern {{name : std_rail_conn1} {nets: "VDD VSS"}} -
+core
+compile_pg -strategies std_rail_1
