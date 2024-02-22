@@ -6,7 +6,7 @@ set target_library $TARGET_LIBRARY_FILES_MVT
 
 set power "VDD"
 set ground "VSS"
-create_lib -ref_libs $NDM_REFERENCE_LIB_DIRS_MVT -technology $TECH_FILE../work/chiptop
+create_lib -ref_libs $NDM_REFERENCE_LIB_DIRS_MVT -technology $TECH_FILE ../work/chiptop
 
 read_parasitic_tech -tlup $TLUPLUS_MAX_FILE -layermap $MAP_FILE
 read_parasitic_tech -tlup $TLUPLUS_MIN_FILE -layermap $MAP_FILE
