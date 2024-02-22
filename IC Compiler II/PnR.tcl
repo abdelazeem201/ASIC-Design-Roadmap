@@ -28,7 +28,8 @@ set_attribute [get_layers M8] routing_direction horizontal
 set_attribute [get_layers M9] routing_direction vertical
 set_attribute [get_layers MRDL] routing_direction horizontal
 
-set_wire_track_pattern -site_def unit -layer M1 -mode uniform -mask_constraint{mask_two mask_one} \-coord 0.037 -space 0.074 -direction vertical
+set_wire_track_pattern -site_def unit -layer M1 -mode uniform -mask_constraint{mask_two mask_one} 
+\-coord 0.037 -space 0.074 -direction vertical
 
 source ../scripts/mcmm.tcl
 
@@ -43,3 +44,9 @@ create_net -ground $NDM_GROUND_NET
 
 connect_pg_net -net $NDM_POWER_NET [get_pins -hierarchical "*/VDD"]
 connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
+
+#########################################SRAMs'Placement################################################################
+set sram_width 54.468
+set sram_space 40
+set sram_start_x 55.4690
+set sram_start_y 246.60
