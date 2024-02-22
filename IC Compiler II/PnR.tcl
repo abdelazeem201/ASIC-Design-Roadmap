@@ -50,3 +50,20 @@ set sram_width 54.468
 set sram_space 40
 set sram_start_x 55.4690
 set sram_start_y 246.60
+
+set_attribute [get_cells MemYHier_MemXb] orientation R0
+set_attribute [get_cells MemYHier_MemXa] orientation R0
+set_attribute [get_cells MemXHier_MemXb] orientation R0
+set_attribute [get_cells MemXHier_MemXa] orientation R0
+set_attribute [get_cells MemYHier_MemXb] origin "$sram_start_x $sram_start_y"
+set_attribute [get_cells MemYHier_MemXa] origin "[expr $sram_start_x + $sram_width 
++ $sram_space] $sram_start_y"
+set_attribute [get_cells MemXHier_MemXb] origin "[expr $sram_start_x + 
+2*($sram_width + $sram_space)] $sram_start_y"
+set_attribute [get_cells MemXHier_MemXa] origin "[expr $sram_start_x + 
+3*($sram_width + $sram_space)] $sram_start_y"
+set_fixed_objects [get_cell MemXHier_MemXa]
+set_fixed_objects [get_cell MemXHier_MemXb]
+set_fixed_objects [get_cell MemYHier_MemXa]
+set_fixed_objects [get_cell MemYHier_MemXb]
+create_keepout_margin -type hard -outer {20 20 20 20} [get_cells Mem?Hier_MemX?]
