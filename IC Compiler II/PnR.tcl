@@ -107,6 +107,36 @@ create_routing_blockage -layers * -boundary { {45 425} {305 617} }
 ## Create std rail
 #VDD VSS
 create_pg_std_cell_conn_pattern std_rail_conn1 -rail_width 0.094 -layers M1
-set_pg_strategy std_rail_1 -pattern {{name : std_rail_conn1} {nets: "VDD VSS"}} -
-core
+set_pg_strategy std_rail_1 -pattern {{name : std_rail_conn1} {nets: "VDD VSS"}} -core
 compile_pg -strategies std_rail_1
+
+###################################################################################
+###########################
+############place_opt#################################
+set_app_options -name time.disable_recovery_removal_checks -value false
+set_app_options -name time.disable_case_analysis -value false
+set_app_options -name place.coarse.continue_on_missing_scandef -value true
+place_opt
+legalize_placement
+report_placement
+###################################################################################
+#########################
+## std filler
+set pnr_std_fillers "SAEDRVT14_FILL*"
+set std_fillers ""
+foreach filler $pnr_std_fillers { lappend std_fillers "*/${filler}" }
+create_stdcell_filler -lib_cell $std_fillers
+connect_pg_net -net $power [get_pins -hierarchical "*/VDD"]
+connect_pg_net -net $ground [get_pins -hierarchical "*/VSS"]
+remove_cells [get_cells -filter ref_name=~"*FILL*" ]
+#########################Setting CTS Options###############################
+remove_routing_blockages *
+create_routing_rule ROUTE_RULES_1 \
+ -widths {M3 0.2 M4 0.2 } \
+ -spacings {M3 0.42 M4 0.63 }
+set_clock_routing_rules -rules CLK_SPACING -min_routing_layer M2 -max_routing_layer
+M4
+set_clock_tree_options -target_latency 0.000 -target_skew 0.000 
+###################################################################################
+###########################
+############clock_opt#################################
