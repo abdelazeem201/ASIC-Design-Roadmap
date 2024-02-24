@@ -35,7 +35,7 @@ source ../scripts/mcmm.tcl
 
 #./output/ChipTop_pads.v
 
-initialize_floorplan \ -flip_first_row true \ -boundary {{0 0} {400 400}} \ -core_offset {15 15 15 15}
+initialize_floorplan -flip_first_row true -boundary {{0 0} {400 400}} -core_offset {15 15 15 15}
 
 place_pins -ports [get_ports *]
 
