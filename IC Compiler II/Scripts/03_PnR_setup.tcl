@@ -488,10 +488,12 @@ write_gds \
 -fill include \
 -exclude_empty_block \
 -long_names \
--layer_map "/home/abdelazeem/Desktop/Abdelazeem/PGDip/Project/StandardCell/NangateOpenCellLibrary_PDKv1_3_v2010_12/tech/strmout/FreePDK45_10m_gdsout.map" \
+-layer_map "$GDS_MAP_FILE" \
 -keep_data_type \
--merge_gds_top_cell ${DESIGN_NAME} \
+-merge_files "$STD_CELL_GDS"
 ${DESIGN_NAME}.gds
+
+
 
 save_block
 save_lib
