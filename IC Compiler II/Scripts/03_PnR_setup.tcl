@@ -490,8 +490,8 @@ write_gds \
 -long_names \
 -layer_map "$GDS_MAP_FILE" \
 -keep_data_type \
--merge_files "$STD_CELL_GDS"
-${DESIGN_NAME}.gds
+-merge_files "$STD_CELL_GDS"\
+./output/${DESIGN_NAME}.gds
 
 
 
