@@ -4,6 +4,9 @@
 # March 11, 2024
 # Updated to cover more LEF cases
 # July 1, 2024
+# A Perl script processes a technology file (.tf) and an LEF (Library Exchange Format) file to generate a mapping between layers defined in these files.
+#
+#
 
 $EXPECTED_COMMAND_ARGS = 2;
 
