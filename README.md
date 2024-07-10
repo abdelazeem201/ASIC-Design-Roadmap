@@ -13,7 +13,7 @@ Thus, ASICs are better as mass production is possible, the cost per unit is less
 <div align="center"> بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم</div>
 
 <div align="center"> “وَمَا أُوتِيتُمْ مِنَ الْعِلْمِ إِلَّا قَلِيلًا”</div>
-*A. Prerequisite for this Roadmap:*
+
 
 ## Tutorials and Courses
 1. [Digital electronics](https://www.youtube.com/playlist?list=PLMSBalys69yzp1vrmnYAmpRFiptbuGuaj) 📽 - First of all I would like to tell you to build your basic concepts strong,which includes Digital electronics ,MOSFET,CMOS Design,FF ,Latches.
