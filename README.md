@@ -1,121 +1,122 @@
-# ASIC-Design-Roadmap
-The journey of designing an ASIC (application specific integrated circuit) is long and involves a number of major steps – moving from a concept to specification to tape-outs. Although the end product is typically quite small (measured in nanometers), this long journey is interesting and filled with many engineering challenges.
+# 🧠 ASIC Design Roadmap
+
+> Empowering students worldwide with a complete roadmap to learn **Application Specific Integrated Circuit (ASIC)** Design — from logic to layout, RTL to GDSII.
+
+<div align="center">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم</div>
+<div align="center">“وَمَا أُوتِيتُمْ مِنَ الْعِلْمِ إِلَّا قَلِيلًا”</div>
+
+---
+
+The journey of designing an ASIC (Application Specific Integrated Circuit) is long and deeply technical — transforming an idea into silicon requires precision, planning, and patience. Despite the final chip being only a few nanometers in scale, the design process includes multiple sophisticated steps filled with engineering challenges and opportunities for learning.
+
+ASICs are purpose-built chips tailored for specific applications. Unlike general-purpose processors or FPGAs, they are optimized for power, performance, and area (PPA), making them ideal for mass production. Their circuits, built from permanent gates and flip-flops, are described using hardware description languages such as Verilog, SystemVerilog, or VHDL.
+
+> ✅ More power-efficient than FPGAs  
+> ✅ Capable of higher frequencies  
+> ✅ Ideal for high-volume production  
+> ⚠️ Not suitable for frequent upgrades  
+> ⚠️ Bugs after tape-out are costly
+
+![Complex ASIC Design](https://github.com/abdelazeem201/ASIC-Physical-Design-Roadmap/blob/main/Figures/Fig.%20Complex%20ASIC%20Design.jpeg)
+---
+
+# 📌 Why This Roadmap?
+Many students and entry-level engineers want to break into the world of IC design but are unsure where to begin or how to build strong fundamentals. When you search for resources online, the flood of random posts and YouTube videos can leave you even more lost and overwhelmed. That’s why I decided to build this open-source roadmap — to make the learning process smoother and more organized for anyone looking to enter the industry.
+
+# 🎯 Who Is This For?
+Whether you’re a student, fresh graduate, or an engineer transitioning into VLSI, this roadmap is tailored to help you navigate Physical Design — one of the most critical and challenging domains in ASIC development.
+
+# 🚀 What’s Inside?
+This roadmap is not just a list of tools or topics. It’s a carefully structured guide with:
+
+> * Step-by-step learning paths from basic concepts to industry-level knowledge
+> * Hands-on projects and scripts to give you practical experience
+> * Tips and insights from real-world Physical Design workflows
+> * Links to trusted resources — not just random Google or YouTube results
 
 
-Application Specific Integrated Circuit (ASIC) are application specific, which means the design is for sole purpose. So, the CPU inside your phone is ASIC. The digital circuitry of ASIC is made up of permanently connected gates and flip-flops in silicon. The logic function of ASIC is specified using hardware description languages such as Verilog, System Verilog or VHDL. ASIC is more power efficient than FPGAs, since its circuit is optimized for its specific function. Power consumption of ASICs can be very minutely controlled and optimized using many approaches such as Design Space Exploration DSE. ASIC is well suited for very high-volume mass production. ASIC are capable of working at much higher frequency than FPGAs. The important factor, ASICs can have complete analog circuitry, for example WiFi transceiver, on the same die along with microprocessor cores. This is the advantage which FPGAs lack. But as said, ASICs are not suited or preferred for the application areas where the design might need to be upgraded frequently or once-in-a-while. The verification is an absolutely importation step in ASIC prototyping as it is not recommended to prototype a design using ASICs unless it has been validated and verified. Thus, when the silicon has been taped out, almost nothing can be done to fix a design bug.
+---
 
-Thus, ASICs are better as mass production is possible, the cost per unit is lesser as compared to FPGA(whereas getting started with FPGA is cheaper as compared to ASIC). ASIC is comparatively energy efficient.The designer has few entry barriers to start with ASICs. Analog design can be implemented on ASIC.
+## 📘 Table of Contents
 
-![Fig. Complex ASIC Design](https://github.com/abdelazeem201/ASIC-Physical-Design-Roadmap/blob/main/Figures/Fig.%20Complex%20ASIC%20Design.jpeg)
+- [Introduction](#introduction)
+- [Fundamentals](#fundamentals)
+- [ASIC Design Flow](#asic-design-flow)
+- [Awesome Digital IC Resources](#awesome-digital-ic-resources)
+- [Project Repositories and IPs](#project-repositories-and-ips)
 
+---
 
-# *Physical Design flow of Application Specific Integrated Circuits:*
-<div align="center"> بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم</div>
+## 🧾 Introduction
 
-<div align="center"> “وَمَا أُوتِيتُمْ مِنَ الْعِلْمِ إِلَّا قَلِيلًا”</div>
+The aim of this roadmap is to provide aspiring ASIC and Digital IC designers a clear path to follow — with carefully selected courses, resources, and projects that balance theory and practice. Whether you're a beginner or transitioning from FPGA/Embedded design, this roadmap is crafted to guide you through every phase of ASIC development.
 
+---
 
-## Tutorials and Courses
-1. [Digital electronics](https://www.youtube.com/playlist?list=PLMSBalys69yzp1vrmnYAmpRFiptbuGuaj) 📽 - First of all I would like to tell you to build your basic concepts strong,which includes Digital electronics ,MOSFET,CMOS Design,FF ,Latches.
- 
- `"Note" You don't need to go through the whole coures, you just need the basic concepts of MOSFET` 
+## 🧱 Fundamentals
 
-2. Digital logic design (ASIC/SOC)/Frontend design: This includes digital design techniques
+### 1. **Digital Electronics & CMOS Basics**
+- [Digital Electronics (Playlist)](https://www.youtube.com/playlist?list=PLMSBalys69yzp1vrmnYAmpRFiptbuGuaj) 📽  
+  *Focus: Logic gates, FFs, CMOS inverter, MOSFET switching.*
 
-[CS221 digital design by Dr/Waleed Youssef](https://youtube.com/playlist?list=PLoK2Lr1miEm8b6Vv5zAfsbMEPZ1C7fCQw) 📽 - Digital System Design
+### 2. **Digital Logic Design / Frontend**
+- [Digital Design – CS221 by Dr. Waleed Youssef](https://youtube.com/playlist?list=PLoK2Lr1miEm8b6Vv5zAfsbMEPZ1C7fCQw) 📽  
+- [Verilog Modeling – Dr. Indranil Sen Gupta](https://www.youtube.com/playlist?list=PLJ5C_6qdAvBELELTSPgzYkQg3HgclQh-5) 📽  
 
-[Hardware modeling using verilog by Dr/Indranil Sen Gupta](https://www.youtube.com/playlist?list=PLJ5C_6qdAvBELELTSPgzYkQg3HgclQh-5) 📽 -HDLs like Verilog, and several design techniques like timing, synthesis, logic circuits, state machines, pipelining, etc etc
+### 3. **Computer Architecture**
+- [Digital Design and Computer Architecture (YouTube)](https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_FRrloMa2fUYWPGiZUBQo2) 📽
 
-3. Digital Design & Computer Architecture
-   
-   [Digital Design and Computer Architecture](https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_FRrloMa2fUYWPGiZUBQo2) 📽- Digital Design and Computer Architecture
+### 4. **Digital IC Design (RTL to ASIC)**
+> Based on "CMOS VLSI Design" by Weste & Harris  
+- [Part 1](https://youtube.com/playlist?list=PLMSBalys69yzvAKErDt7tT7O-iIKPlOCP) 📽  
+- [Part 2](https://youtube.com/playlist?list=PLMSBalys69yxoIjeZ2Q3fxs69cGCU14B1) 📽  
+- [Part 3](https://youtube.com/playlist?list=PLMSBalys69yw1tSoF42QW9jbbC0-UeCAy) 📽  
 
-4. Digital IC Design: A comprehensive Digital IC Design course -by Dr/Hesham Omran- that takes you from basics to ASICs based on the popular textbook "CMOS VLSI Design: A Circuits and Systems Perspective" 4th ed. by Weste and Harris.
+---
 
-   part1: https://youtube.com/playlist?list=PLMSBalys69yzvAKErDt7tT7O-iIKPlOCP
+## 🔧 ASIC Design Flow
 
-   part2: https://youtube.com/playlist?list=PLMSBalys69yxoIjeZ2Q3fxs69cGCU14B1
+### Logic Synthesis & Timing Closure
+- [Advanced Logic Synthesis by Dhiraj Taneja](https://www.youtube.com/playlist?list=PLbMVogVj5nJQe0_9YJlN9S7ktkA8DI-fL) 📽  
+  *Includes Synopsys DC/PT Labs – skip first 12 videos if needed*
 
-   part3: https://youtube.com/playlist?list=PLMSBalys69yw1tSoF42QW9jbbC0-UeCAy
+### Physical Design
+- [Physical Design – Prof. Indranil Sengupta](https://www.youtube.com/playlist?list=PLU8VFS-HdvKtKswbcvvA8yVhzleTV7OE8) 📽  
+  *Covers Floorplanning, Placement, CTS, Routing, DRC/LVS*
 
-### *ASIC Design Cycle Work "PnR":*
+- [RTL to GDSII (by Adi Teman)](https://www.youtube.com/playlist?list=PLZU5hLL_713x0_AV_rVbay0pWmED7992G) 📽  
+  *Very recommended* ✅
 
-  *1. Advanced Logic Synthesis by Dhiraj Taneja,Broadcom, Hyderabad.*
-   
-[Logic Synthesis](https://www.youtube.com/playlist?list=PLbMVogVj5nJQe0_9YJlN9S7ktkA8DI-fL) 📽 - This course aims at imparting practical knowledge in Synthesis and Timing Closure. It also includes Synopsys DC and PT labs. 
-  
-   "You can skip the first 12 videos if you want" 
+- [My Slideshare RTL2GDSII Notes](https://www.slideshare.net/AhmedAbdelazeem28/presentations) 📚
 
-  *2. VLSI Physical Design By Prof. Indranil Sengupta*
-   
-[Physical design and implementation](https://www.youtube.com/playlist?list=PLU8VFS-HdvKtKswbcvvA8yVhzleTV7OE8) 📽 - Physical design and implementation: In VLSI design flow after the front end logic design and verification is done, the backend or physical design flow is the next step in terms of mapping the design to technology. This involves the following steps majorly - Design Netlist (synthesis), Floorplanning, Partitioning, Placement, Clock tree synthesis, Routing, Physical Verification, and GDS Generation for tape out.).
-  
-   *3. Digital VLSI Design (RTL to GDS)* "Very recommended" 
-     
-[RTL2GDSII](https://www.youtube.com/playlist?list=PLZU5hLL_713x0_AV_rVbay0pWmED7992G) 📽 - cover the basics of Chip Implementation, from designing the logic (RTL) to providing a layout ready for fabrication (GDS).
+---
 
-   *4. ASIC Design Flow (RTL to GDS)* 
-   [RTL2GDSII](https://www.slideshare.net/AhmedAbdelazeem28/presentations)
-   
-   
-# Awesome Digital IC
+## 🌍 Awesome Digital IC Resources
 
-> A collection of great ASIC/FPGA/VLSI project/tutorial/website.
+> Curated lists and tools for ASIC/VLSI/FPGA engineers
 
-- 📍 = Github Project
-- 📽 = With vedio
-- 👶 = Easy to get start with
-- ⭐ = Recommended
-- 💬 = More Details
+| Name | Type | Description |
+|------|------|-------------|
+| [Awesome FPGA](https://github.com/Vitorian/awesome-fpga) | 📍⭐ | FPGA resources and boards |
+| [Awesome HDL](https://github.com/drom/awesome-hdl) | 📍⭐ | Hardware description languages |
+| [Awesome Open Source EDA](https://github.com/clin99/awesome-eda) | 📍 | Open-source EDA tools |
+| [Awesome Hardware Verification](https://github.com/ben-marshall/awesome-open-hardware-verification) | 📍 | Verification tools |
+| [Awesome HWD Tools](https://github.com/TM90/awesome-hwd-tools) | 📍 | Open-source IC design tools |
+| [Awesome Lattice FPGAs](https://github.com/kelu124/awesome-latticeFPGAs) | 📍 | Lattice FPGA board list |
 
-## Awesome Awesome ⭐
+---
 
-> Awesome-lists for digital ic.
+## 📦 Project Repositories and IPs
 
-- [FPGA Tutorial](https://github.com/LeiWang1999/FPGA) 📍![stars](https://img.shields.io/github/stars/LeiWang1999/FPGA) - A curated list of amazingly FPGA tutorials and projects.
-- [Awesome Hardware Description Languages](https://github.com/drom/awesome-hdl) 📍![stars](https://img.shields.io/github/stars/drom/awesome-hdl) - A curated list of amazingly awesome hardware description language projects.
-- [Awesome FPGA](https://github.com/Vitorian/awesome-fpga) 📍![stars](https://img.shields.io/github/stars/Vitorian/awesome-fpga) - A collection of resources on FPGA devices and development in general.
-- [Open Hardware Verification](https://github.com/ben-marshall/awesome-open-hardware-verification) 📍![stars](https://img.shields.io/github/stars/ben-marshall/awesome-open-hardware-verification) - A curated List of Free and Open Source hardware verification tools and frameworks.
-- [Awesome Open Source EDA Projects](https://github.com/clin99/awesome-eda) 📍![stars](https://img.shields.io/github/stars/clin99/awesome-eda) - A curated list of EDA open source projects. 
-- [List of FPGA boards](https://github.com/iDoka/awesome-fpga-boards) 📍![stars](https://img.shields.io/github/stars/iDoka/awesome-fpga-boards) - List of Repurposed FPGA boards.
-- [awesome-hwd-tools](https://github.com/TM90/awesome-hwd-tools) 📍![stars](https://img.shields.io/github/stars/TM90/awesome-hwd-tools) - A curated list of awesome open source hardware design tools with a focus on chip design.
-- [Awesome Electronics](https://github.com/kitspace/awesome-electronics) 📍![stars](https://img.shields.io/github/stars/kitspace/awesome-electronics) - A curated list of awesome resources for electronic engineers and hobbyists.
-- [Awesome Lattice FPGA boards](https://github.com/kelu124/awesome-latticeFPGAs) 📍![stars](https://img.shields.io/github/stars/kelu124/awesome-latticeFPGAs) - A curated list of awesome open-source FPGA boards
+### Core IPs and Repos
+- [OpenCores](https://opencores.org/) ⭐ - IP Cores Archive  
+- [FreeCores](http://freecores.github.io/) 📍 - Legacy IPs from OpenCores  
+- [Basic Verilog Modules](https://github.com/pConst/basic_verilog) 📍 - Synthesizable Verilog modules  
+- [32 Mini Projects (Verilog)](https://github.com/sudhamshu091/32-Verilog-Mini-Projects) 📍👶
 
-### Github Topics
+### Communication Protocols
+- [Alex Forencich's IPs](http://alexforencich.com/wiki/en/verilog/start) - PCIe, Ethernet, I2C, UART and more
 
-- [verilog](https://github.com/topics/verilog?o=desc&s=stars) 📍 - Here are 2,566 public repositories matching "verilog" topic...
-- [vhdl](https://github.com/topics/vhdl?o=desc&s=stars) 📍- Here are 1,766 public repositories matching "vhdl" topic...
-- [fpga](https://github.com/topics/fpga?o=desc&s=stars) 📍 - Here are 3,136 public repositories matching "fpga" topic...
-
-### Quora Topics
-
-- [verilog](https://github.com/topics/verilog?o=desc&s=stars) 📍 - Here are 2,566 public repositories matching "verilog" topic...
-- [vhdl](https://github.com/topics/vhdl?o=desc&s=stars) 📍- Here are 1,766 public repositories matching "vhdl" topic...
-- [fpga](https://github.com/topics/fpga?o=desc&s=stars) 📍 - Here are 3,136 public repositories matching "fpga" topic...
-
-## Projects and IPs
-
-- [OpenCores](https://opencores.org/) ⭐ - Free and open source IP cores.
-- [FreeCores](http://freecores.github.io/) 📍![stars](https://img.shields.io/github/stars/freecores/freecores.github.io) - A home for open source hardware cores, a fork of almost all cores that was once on OpenCores.org.
-- [Must-have verilog systemverilog modules](https://github.com/pConst/basic_verilog) 📍![stars](https://img.shields.io/github/stars/pConst/basic_verilog) - A collection of verilog systemverilog synthesizable modules.
-- [fpga4fun](https://www.fpga4fun.com/) - Some projects build on FPGA.
-- [32 Verilog Mini Projects](https://github.com/sudhamshu091/32-Verilog-Mini-Projects/) 📍![stars](https://img.shields.io/github/stars/sudhamshu091/32-Verilog-Mini-Projects) - 32 useful mini verilog projects for beginners.
-
-### Communication Technology
-
-- [ALEX FORENCICH](http://alexforencich.com/wiki/en/verilog/start) - Verilog IPs including PCIe/Ethernet/I2C/Uart etc.
-
-- [ALEX FORENCICH - AXI](https://github.com/alexforencich/verilog-axi) 📍![stars](https://img.shields.io/github/stars/alexforencich/verilog-axi) - Collection of AXI4 and AXI4 lite bus components. Most components are fully parametrizable in interface widths.
-- [TVIP - AXI](https://github.com/taichi-ishitani/tvip-axi) 📍![stars](https://img.shields.io/github/stars/taichi-ishitani/tvip-axi) - An UVM package of AMBA AXI4 VIP.
-- [PULP-platform - AXI](https://github.com/pulp-platform/axi) 📍![stars](https://img.shields.io/github/stars/pulp-platform/axi) - AXI SystemVerilog synthesizable IP modules and verification infrastructure for high-performance on-chip communication.
-- [ALEX FORENCICH - AXIS](https://github.com/alexforencich/verilog-axis) 📍![stars](https://img.shields.io/github/stars/alexforencich/verilog-axis) - Collection of AXI Stream bus components. Most components are fully parametrizable in interface widths.
-- [ALEX FORENCICH - IIC](https://github.com/alexforencich/verilog-i2c) 📍![stars](https://img.shields.io/github/stars/alexforencich/verilog-i2c) - I2C interface components. Includes full MyHDL testbench with intelligent bus cosimulation endpoints.
-- [corundum - NIC](https://github.com/corundum/corundum) 📍![stars](https://img.shields.io/github/stars/corundum/corundum)
-- [RIFFA - PCIe](https://github.com/KastnerRG/riffa) 📍![stars](https://img.shields.io/github/stars/KastnerRG/riffa) - Reusable Integration Framework for FPGA Acceleratorscommunication.
-- [ALEX FORENCICH - UART](http://github.com/alexforencich/verilog-uart/) 📍![stars](https://img.shields.io/github/stars/alexforencich/verilog-uart) - A basic UART to AXI Stream IP core, written in Verilog with cocotb testbenches.
-- [zipcpu - UART](https://github.com/ZipCPU/wbuart32) 📍![stars](https://img.shields.io/github/stars/ZipCPU/wbuart32) - A simple, basic, formally verified UART controller.
-- [C910 - UART](https://github.com/MeDove/openc910/tree/main/smart_run/logical) 📍
 
 ### Information Technology
 
@@ -200,6 +201,20 @@ Thus, ASICs are better as mass production is possible, the cost per unit is less
 
 - [HDL bits](https://hdlbits.01xz.net/wiki/Main_Page) - A collection of small circuit design exercises for practicing digital hardware design using Verilog Hardware Description Language (HDL).
 - [nowcoder - Verilog Part](https://www.nowcoder.com/exam/oj?page=1&tab=Verilog%E7%AF%87&topicId=301) - A verilog oj platform.
+---
 
+## 🧠 Final Thoughts
+
+🔹 Start slow, stay consistent.  
+🔹 Simulate everything before synthesizing.  
+🔹 Join VLSI communities and open-source projects.  
+🔹 Learn by doing – replicate designs, break them, and fix them.  
+
+If this roadmap helped you, consider sharing it with others or contributing back to the repo!  
+📬 For inquiries or collaborations: [a.abdelazeem201@gmail.com](mailto:a.abdelazeem201@gmail.com)
+
+---
+
+> _“Whoever treads a path in search of knowledge, Allah will make easy for him the path to Paradise.” – Prophet Muhammad ﷺ_
 
 
