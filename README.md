@@ -172,6 +172,12 @@ The aim of this roadmap is to provide aspiring ASIC and Digital IC designers a c
 - [ClueLogic](http://cluelogic.com) - Providing the clues to solve your verification problems.
 - [ChipVerify](https://www.chipverify.com/) - A simple and complete set of verilog/System Verilog/UVM tutorials.
 
+#### Podcasts
+
+- [Bugged Out](https://blogs.sw.siemens.com/podcasts/bugged-out/) - Short verification podcast from Siemens EDA, hosted by Harry Foster.
+- [Computer Architecture Podcast](https://comparchpodcast.podbean.com/) - Conversations on computer architecture research and industry, hosted by Suvinay Subramanian and Lisa Hsu.
+- [Wearing Flip-Flops](https://wearing-flip-flops.com) - Chip design and verification conversations with engineers from Cadence, Synopsys, Google and AWS, hosted by Ronen Laviv.
+
 ### Build a CPU
 
 - [RISC-V Guide](https://github.com/mikeroyal/RISC-V-Guide) 📍![stars](https://img.shields.io/github/stars/mikeroyal/RISC-V-Guide) - A guide covering the RISC-V Architecture.
